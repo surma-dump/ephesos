@@ -1,0 +1,7 @@
+#!/bin/sh
+cd boot/asm
+make
+
+cd ../../
+cp bin/boot.bin qemu-test/fdd.img
+#dd if=qemu-test/fdd.img of=/dev/fd0 bs=512K
